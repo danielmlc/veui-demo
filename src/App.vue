@@ -1,28 +1,58 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<article>
+  <section>
+    <veui-button ui="primary">
+      Primary
+    </veui-button>
+    <veui-button>Normal</veui-button>
+    <veui-button ui="basic">
+      Basic
+    </veui-button>
+    <veui-button ui="strong">
+      Strong
+    </veui-button>
+    <veui-button ui="translucent">
+      Translucent
+    </veui-button>
+  </section>
+  <section>
+    <veui-button ui="text">
+      Text
+    </veui-button>
+    <veui-button ui="icon">
+      <veui-icon name="home"/>
+    </veui-button>
+    <veui-button ui="icon strong">
+      <veui-icon name="home"/>
+    </veui-button>
+    <veui-button ui="icon aux">
+      <veui-icon name="home"/>
+    </veui-button>
+    <veui-button ui="primary square">
+      <veui-icon name="home"/>
+    </veui-button>
+  </section>
+</article>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { Button, Icon } from 'veui'
+import 'veui-theme-dls-icons/home'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    'veui-button': Button,
+    'veui-icon': Icon
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less" scoped>
+.veui-button {
+  margin-right: 1em;
+}
+
+section {
+  margin-top: 20px;
 }
 </style>
